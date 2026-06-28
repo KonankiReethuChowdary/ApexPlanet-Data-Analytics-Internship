@@ -10,8 +10,8 @@ print(f"Total Duplicates: {df.duplicated().sum()}")
 print("\nMissing Values per Column before cleaning:")
 print(df.isnull().sum())
 df_clean = df.drop_duplicates() 
-if 'age' in df_clean.columns:
-    df_clean['age'] = df_clean['age'].fillna(df_clean['age'].median())
+if 'Age' in df_clean.columns:
+    df_clean['Age'] = df_clean['Age'].fillna(df_clean['Age'].median())
 if 'order date' in df_clean.columns:
     df_clean['order date'] = pd.to_datetime(df_clean['order date'], errors='coerce')
 if all(col in df_clean.columns for col in ['quantity', 'unit price', 'total sales']):
