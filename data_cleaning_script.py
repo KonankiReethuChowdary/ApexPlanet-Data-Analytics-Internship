@@ -1,9 +1,9 @@
 import pandas as pd
 try:
     df = pd.read_excel(r"C:\Users\reeth\Downloads\ApexPlanet_DataAnalytics_Dataset (1).xlsx") 
-    print("✅ Dataset loaded successfully!")
+    print("Dataset loaded successfully!")
 except FileNotFoundError:
-    print("❌ Error: Could not find your dataset file. Check the filename!")
+    print("Error: Could not find your dataset file. Check the filename!")
 print("\n--- Data Quality Check ---")
 print(f"Total Rows: {df.shape[0]}")
 print(f"Total Duplicates: {df.duplicated().sum()}")
